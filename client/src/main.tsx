@@ -5,6 +5,7 @@ import App from "./App.tsx";
 import "./styles/index.css";
 
 // Pages import
+import { CardCollection } from "./pages/CardCollection.tsx";
 import { Home } from "./pages/Home.tsx";
 
 // Router creation
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/collection",
+        element: <CardCollection />,
       },
     ],
   },

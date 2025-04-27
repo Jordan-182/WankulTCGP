@@ -10,7 +10,7 @@
     "rarity": "Terrain",
     "dropRate": 10,
     "holo": false,
-    "isPossessed": false,
+    "isPossessed": true,
     "quote": null
   },
   {
