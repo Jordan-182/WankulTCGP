@@ -1,0 +1,6 @@
+.globalFooter {
+  background: var(--headerBackground);
+  color: var(--headerTextColor);
+  padding: var(--spacingXS) var(--spacingS);
+  text-align: center;
+}

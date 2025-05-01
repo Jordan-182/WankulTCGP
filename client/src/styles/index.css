@@ -4,9 +4,19 @@
 :root {
   --mainFont: "Roboto", sans-serif;
   --titleFont: "Montserrat", sans-serif;
-  --backgroundColor: #121212;
-  --textColor: #f9f9f9;
   --blueColor: #071e66;
+  --globalBackgroundColor: #121212;
+  --globalTextColor: #f9f9f9;
+  --secondaryBackgroundColor: #f9f9f9;
+  --secondaryTextColor: #121212;
+  --headerBackground: #f9f9f9;
+  --headerTextColor: #121212;
+  --spacingXS: 1rem;
+  --spacingS: 2rem;
+  --spacingM: 3rem;
+  --spacingL: 4rem;
+  --spacingXL: 5rem;
+  --spacingXXL: 6rem;
 }
 
 /* CSS Reset */
@@ -28,14 +38,25 @@ a {
 }
 
 /* Global Styles */
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 body {
   font-family: var(--mainFont);
-  background-color: var(--backgroundColor);
-  color: var(--textColor);
+  background-color: var(--globalBackgroundColor);
+  color: var(--globalTextColor);
   line-height: 1.6;
   height: 100vh;
   width: 100vw;
-  overflow-y: scroll;
+}
+
+main {
+  padding: var(--spacingS) var(--spacingM);
+  min-height: calc(100dvh - 162px);
+  overflow: hidden;
 }
 
 h1,

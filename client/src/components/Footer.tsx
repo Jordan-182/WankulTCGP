@@ -1,3 +1,9 @@
+import styles from "../styles/Footer.module.css";
+
 export const Footer: React.FC = () => {
-  return <h2>Footer</h2>;
+  return (
+    <footer className={styles.globalFooter}>
+      <h2>Footer</h2>
+    </footer>
+  );
 };

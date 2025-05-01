@@ -1,0 +1,75 @@
+.globalHeader {
+  background-color: var(--headerBackground);
+  color: var(--headerTextColor);
+  padding: var(--spacingXS);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.headerLogo {
+  height: 60px;
+}
+
+.headerNavOpen,
+.headerNavClosed {
+  position: absolute;
+  top: 92px;
+  left: 0;
+  background: var(--headerBackground);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacingXS);
+  width: 100%;
+  padding: var(--spacingS) 0;
+  transition: 0.3s ease;
+}
+
+.headerNavClosed {
+  transform: translateX(100%);
+}
+
+.headerNavOpen {
+  transform: translateX(0%);
+}
+
+.burgerMenuBtn {
+  height: 40px;
+  width: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .globalHeader {
+    padding: var(--spacingXS) var(--spacingS);
+  }
+}
+
+@media screen and (min-width: 774px) {
+  .headerNavClosed {
+    transform: translateX(0%);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacingXS);
+    padding: var(--spacingXS) 0;
+  }
+
+  .burgerMenuBtn {
+    display: none;
+  }
+}

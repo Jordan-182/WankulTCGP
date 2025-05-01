@@ -13,23 +13,19 @@ export const CardCollection: React.FC = () => {
   const { cards } = context;
   return (
     <section>
-      <h2>Collection de cartes</h2>
-      <ul className={styles.container}>
-        {cards.map((card: WankulCard) => (
-          <li key={card.id} className={styles.cardItem}>
-            {card.isPossessed ? (
+      <h2 className={styles.pageTitle}>Collection de cartes</h2>
+      <section>
+        <h3 className={styles.sectionTitle}>Saison 1 : Origins</h3>
+        <ul className={styles.container}>
+          {cards.map((card: WankulCard) => (
+            <li key={card.id} className={styles.cardItem}>
               <img src={`http://localhost:3310${card.img}`} alt={card.name} />
-            ) : (
-              <img
-                src={`http://localhost:3310/saison1/boosterS1Recto.webp`}
-                alt={card.name}
-              />
-            )}
-            <h3>{card.name}</h3>
-            {card.quote ? <p>{card.quote}</p> : null}
-          </li>
-        ))}
-      </ul>
+              <h4>{card.name}</h4>
+              {card.quote ? <p>{card.quote}</p> : null}
+            </li>
+          ))}
+        </ul>
+      </section>
     </section>
   );
 };
