@@ -17,6 +17,7 @@
   --spacingL: 4rem;
   --spacingXL: 5rem;
   --spacingXXL: 6rem;
+  --borderRadius: 5px;
 }
 
 /* CSS Reset */
@@ -67,4 +68,8 @@ h5,
 h6 {
   font-weight: 700;
   font-family: var(--titleFont);
+}
+
+h1 {
+  text-align: center;
 }

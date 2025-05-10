@@ -43,6 +43,14 @@ export const Header: React.FC = () => {
         >
           A propos
         </Link>
+        <Link
+          to={"/profile"}
+          onClick={() => {
+            handleLinkClick();
+          }}
+        >
+          Profil
+        </Link>
       </nav>
       <button
         className={styles.burgerMenuBtn}

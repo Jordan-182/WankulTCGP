@@ -1,0 +1,66 @@
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  width: clamp(250px, 100%, 600px);
+  margin: 0 auto;
+  border: 2px solid var(--headerBackground);
+  padding: var(--spacingS) var(--spacingXS);
+  border-radius: var(--borderRadius);
+  background-color: var(--headerBackground);
+  color: var(--headerTextColor);
+
+  h3 {
+    color: var(--blueColor);
+  }
+
+  button {
+    width: fit-content;
+    padding: 8px;
+    margin: var(--spacingXS) auto 0;
+    border-radius: var(--borderRadius);
+    border: 2px solid red;
+    background: red;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+    color: var(--headerBackground);
+
+    &:hover {
+      background: transparent;
+      color: red;
+    }
+  }
+}
+
+.userInfos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--spacingXS);
+
+  img {
+    height: 150px;
+    width: 150px;
+    border-radius: var(--borderRadius);
+    margin: 0 auto;
+  }
+
+  h2 {
+    margin: 0 auto var(--spacingXS);
+    color: var(--blueColor);
+  }
+}
+
+.userCollection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    margin: var(--spacingXS) 0 8px;
+    color: var(--blueColor);
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
