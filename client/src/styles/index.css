@@ -55,8 +55,8 @@ body {
 }
 
 main {
-  padding: var(--spacingS) var(--spacingM);
-  min-height: calc(100dvh - 162px);
+  padding: var(--spacingS);
+  min-height: calc(100dvh - 152px);
   overflow: hidden;
 }
 

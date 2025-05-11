@@ -16,7 +16,7 @@
   button {
     width: fit-content;
     padding: 8px;
-    margin: var(--spacingXS) auto 0;
+    margin: var(--spacingS) auto 0;
     border-radius: var(--borderRadius);
     border: 2px solid red;
     background: red;
@@ -40,12 +40,12 @@
   img {
     height: 150px;
     width: 150px;
-    border-radius: var(--borderRadius);
+    border-radius: 50%;
     margin: 0 auto;
   }
 
   h2 {
-    margin: 0 auto var(--spacingXS);
+    margin: 0 auto var(--spacingS);
     color: var(--blueColor);
   }
 }

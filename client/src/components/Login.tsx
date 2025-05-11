@@ -11,7 +11,7 @@ type GooglePayload = {
 };
 
 export const Login = () => {
-  const { setUser, user } = useUser();
+  const { setUser } = useUser();
   interface MyGooglePayload extends GooglePayload {
     given_name: string;
     family_name: string;
@@ -19,43 +19,39 @@ export const Login = () => {
 
   return (
     <section className={styles.container}>
-      {!user.isOnline && (
-        <div>
-          <p>
-            Connecter toi avec Google pour pouvoir utiliser toutes les
-            fonctionnalités du site!
-          </p>
-          <GoogleLogin
-            onSuccess={(credentialResponse) => {
-              if (credentialResponse.credential) {
-                const decoded = jwtDecode<MyGooglePayload>(
-                  credentialResponse.credential
-                );
+      <p>
+        Connecter toi avec Google pour pouvoir utiliser toutes les
+        fonctionnalités du site!
+      </p>
+      <GoogleLogin
+        onSuccess={(credentialResponse) => {
+          if (credentialResponse.credential) {
+            const decoded = jwtDecode<MyGooglePayload>(
+              credentialResponse.credential
+            );
 
-                console.log(decoded);
+            console.log(decoded);
 
-                const newUser: User = {
-                  id: 1,
-                  fullName: decoded.name,
-                  givenName: decoded.given_name,
-                  familyName: decoded.family_name,
-                  email: decoded.email,
-                  isOnline: true,
-                  img: decoded.picture,
-                  cardCollection: [],
-                };
+            const newUser: User = {
+              id: 1,
+              fullName: decoded.name,
+              givenName: decoded.given_name,
+              familyName: decoded.family_name,
+              email: decoded.email,
+              isOnline: true,
+              img: decoded.picture,
+              cardCollection: [],
+            };
 
-                setUser(newUser);
-              }
-            }}
-            onError={() => {
-              console.log("Erreur lors de la connexion Google");
-            }}
-            auto_select={true}
-            shape="pill"
-          />
-        </div>
-      )}
+            setUser(newUser);
+          }
+        }}
+        onError={() => {
+          console.log("Erreur lors de la connexion Google");
+        }}
+        auto_select={true}
+        shape="pill"
+      />
     </section>
   );
 };

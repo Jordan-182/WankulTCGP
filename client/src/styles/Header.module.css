@@ -10,13 +10,13 @@
 }
 
 .headerLogo {
-  height: 60px;
+  height: 50px;
 }
 
 .headerNavOpen,
 .headerNavClosed {
   position: absolute;
-  top: 92px;
+  top: 82px;
   left: 0;
   background: var(--headerBackground);
   display: flex;

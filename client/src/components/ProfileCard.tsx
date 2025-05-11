@@ -15,7 +15,7 @@ export const ProfileCard = () => {
       <div className={styles.userInfos}>
         <img src={user.img} alt={`Image de profil de ${user.fullName}`} />
         <h2>{user.fullName}</h2>
-        <h3>Coordonnées</h3>
+        <h3>Informations</h3>
         <ul>
           <li>
             <span className={styles.bold}>Prénom</span> : {user.givenName}
